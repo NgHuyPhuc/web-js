@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../fontawesome-free-6.3.0-web/css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="../js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <div id="dashboard">
+        <div id="side-bar">
+            <div class="top-side-bar">
+                <a href="./dashboard.html"><i class="fas fa-tasks-alt"></i>
+                    Device
+                    Management</a>
+            </div>
+            <div class="bottom-side-bar">
+                <a id="adashboard" href="./dashboard.html">
+                    <i id="idashboard" class="fa-solid fa-chart-line"></i>
+                    Dashboard
+                </a>
+                <a id="alogs" href="./Logs.html"><i id="idashboard" class="fa-solid fa-clock-rotate-left"></i>Logs</a>
+                <a id="asettings" href="#"><i id="idashboard" class="fa-sharp fa-solid fa-gear"></i>Settings</a>
+            </div>
+
+        </div>
+        <div id="page-top">
+            <div class="account">
+                <a onclick="logoutdropdown()" href="javascript:void(0)"><i style="font-size: 30px;margin-right: 10px;" class="fa-solid fa-face-smile"></i> Welcome John <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+            </div>
+            <div id="logoutdiv">
+                <a href="./login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+            </div>
+        </div>
+        <!-- MENU RESPONSIVE -->
+        <div id="header-menu">
+            <div id="toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="main-menu">
+                    <li>
+                        <i class="fa-solid fa-face-smile"></i>
+                        <a href="./dashboard.html">Welcome John</a>
+                    </li>
+                    <li>
+                        <i style="color: blue;" class="fa-solid fa-chart-line"></i>
+                        <a style="color: blue;" href="./dashboard.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <a href="./Logs.html">Logs</a>
+                    </li>
+                    <li>
+                        <i class="fa-sharp fa-solid fa-gear"></i>
+                        <a href="#">Setting</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- END MENU REPONSIVE -->
+        <div class="container-dashboard">
+            <table id="load-dashboard">
+                <tr style=" border-bottom: 2px solid #000000;">
+                    <th>Device</th>
+                    <th>MAC Address</th>
+                    <th>IP</th>
+                    <th>Create Date</th>
+                    <th>Power Consumtion(Kw/H)</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+        </div>
+        <div class="container-dashboard-chart">
+            <div class="chart">
+                <!-- code cu -->
+                <canvas id="myChart"></canvas>
+                <div id="close-form-input" class="input-form">
+                    <p id="form-name">input form</p>
+                    <form id="form-add" action="">
+                        <p class="show-p-input">Nhập Device:</p>
+                        <input required class="input-value" type="text" placeholder="Device" name="Device">
+                        <p id="errDevice" class="err">Nhập Thông Tin Device</p>
+                        <br>
+                        <p class="show-p-input">Nhập MAC:</p>
+                        <input required class="input-value" type="text" placeholder="MAC Address" name="MAC">
+                        <p id="errMAC" class="err">Nhập Thông Tin MAC:</p>
+
+                        <br>
+                        <p class="show-p-input">Nhập IP:</p>
+                        <input required class="input-value" type="text" placeholder="IP" name="IP">
+                        <p id="errIP" class="err">Nhập Thông Tin IP</p>
+
+                        <br>
+                        <p class="show-p-input">Nhập Date:</p>
+                        <input required class="input-value" type="text" placeholder="Create Date" name="Date">
+                        <p id="errDate" class="err">Nhập Thông Tin Date</p>
+
+                        <br>
+                        <p class="show-p-input">Nhập Power:</p>
+                        <input required class="input-value" type="text" placeholder="Power Consumtion(Kw/H)"
+                            name="Power">
+                        <p id="errPower" class="err">Nhập Thông Tin Power</p>
+            
+
+                    </form>
+                    <button onclick="functionadd()">ADD DEVICE</button>
+                </div>
+                <div id="edit-form-input" class="input-form">
+                    <p id="form-name">edit form</p>
+                    <form id="form-edit" action="">
+                        <p class="show-p-input">Nhập Device:</p>
+                        <input required class="input-value" type="text" placeholder="Device" name="Device">
+                        <p class="err" id="errDevice">Nhập Device</p>
+                        <br>
+                        <p class="show-p-input">Nhập MAC:</p>
+                        <input required class="input-value" type="text" placeholder="MAC Address" name="MAC">
+                        <p class="err" id="errMAC">Nhập MAC</p>
+
+                        <br>
+                        <p class="show-p-input">Nhập IP:</p>
+                        <input required class="input-value" type="text" placeholder="IP" name="IP">
+                        <p class="err" id="errIP">Nhập IP</p>
+
+                        <br>
+                        <p class="show-p-input">Nhập Date:</p>
+                        <input required class="input-value" type="text" placeholder="Create Date" name="Date">
+                        <p class="err" id="errDate">Nhập Date</p>
+
+                        <br>
+                        <p class="show-p-input">Nhập Power:</p>
+                        <input required class="input-value" type="text" placeholder="Power Consumtion(Kw/H)"
+                            name="Power">
+                        <p class="err" id="errPower">Nhập Power</p>
+                        <input id="iddevice"></input>
+                        
+                    </form>
+                    <button onclick="functionupdate()">UPDATE DEVICE</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>

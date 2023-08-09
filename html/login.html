@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Login</title>
+
+</head>
+<body>
+    <div id="body-login">
+            <div id="login-box" class="">
+                <form action="" method="post">
+                <h3>SOIOT SYSTEM</h3>
+                <input class="input-value" id="username-input" type="text" placeholder="user name">
+                <p id="userinputrong">Nhập tài khoản</p>
+                <p id="userinput">Tài khoản không chính xác</p>
+                <br>
+                <input class="input-value" id="password-input" type="text" placeholder="password">
+                <p id="passinputrong">Nhập mật khẩu</p>
+                <p id="passinput">Mật khẩu không chính xác</p>
+
+            </form>
+            <div class="login-button">
+                <!-- <button type="submit">
+                    LOGIN
+                </button> -->
+                <button onclick="checklogin()" type="submit">
+                    LOGIN
+                </button>
+                <a href="#">or create new account</a>
+            </div>
+            </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs</title>
+    <link rel="stylesheet" href="../fontawesome-free-6.3.0-web/css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="../js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <div id="dashboard">
+        <div id="side-bar">
+            <div class="top-side-bar">
+                <a href="./dashboard.html"><i style="font-size: 20px;margin-right:20px ;" class="fas fa-tasks-alt"></i>
+                    Device
+                    Management</a>
+            </div>
+            <div class="bottom-side-bar">
+                <a id="adashboard"  href="./dashboard.html">
+                    <i id="idashboard"  class="fa-solid fa-chart-line"></i>
+                    Dashboard
+                </a>
+                <a id="alogs" href="./Logs.html"><i id="ilogs" class="fa-solid fa-clock-rotate-left"></i>Logs</a>
+                <a id="asettings" href="#"><i id="isettings" class="fa-sharp fa-solid fa-gear"></i>Settings</a>
+            </div>
+
+        </div>
+        <div id="page-top">
+            <div class="account">
+                <a onclick="logoutdropdown()" href="javascript:void(0)"><i style="font-size: 30px;margin-right: 10px;" class="fa-solid fa-face-smile"></i> Welcome John <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+            </div>
+            <div id="logoutdiv">
+                <a href="./login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+            </div>
+        </div>
+        <!-- MENU RESPONSIVE -->
+        <div id="header-menu">
+            <div id="toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="main-menu">
+                    <li>
+                        <i class="fa-solid fa-face-smile"></i>
+                        <a href="./dashboard.html">Welcome John</a>
+                    </li>
+                    <li>
+                        <i  class="fa-solid fa-chart-line"></i>
+                        <a  href="./dashboard.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <i style="color: blue;" class="fa-solid fa-clock-rotate-left"></i>
+                        <a style="color: blue;" href="./Logs.html">Logs</a>
+                    </li>
+                    <li>
+                        <i class="fa-sharp fa-solid fa-gear"></i>
+                        <a href="#">Setting</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- END MENU REPONSIVE -->
+        <div class="search">
+            <div class="search-left">
+                <p>Action Logs </p>
+                <div id="updatepage">
+                    
+                </div>
+            </div>
+            <div class="search-right">
+                <!-- <form action="" method="post"> -->
+                    <input id="value-search" class="input-value" placeholder="search" type="text">
+                <!-- </form> -->
+                <button onclick="filter()">Search</button>
+
+            </div>
+
+        </div>
+        <div class="container-dashboard-logs">
+            <table id="load-logs">
+                <tr style=" border-bottom: 2px solid #000000;">
+                    <th>Device ID #</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                    <th>Date</th>
+                </tr>
+                
+            </table>
+        </div>
+        <div id="pagination">
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/logs.js"></script>
+
+</body>
+
+</html>

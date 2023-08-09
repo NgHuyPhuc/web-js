@@ -1,0 +1,51 @@
+[
+    {
+        "Device": "TV",
+        "MAC": "00:1B44:11:3A:B7",
+        "IP": "127.0.0.2",
+        "CreateDate": "2021-02-11",
+        "Power": "50"
+    },
+    {
+        "Device": "Washer",
+        "MAC": "00:1B44:11:3A:B7",
+        "IP": "127.0.0.2",
+        "CreateDate": "2021-06-23",
+        "Power": "60"
+    },
+    {
+        "Device": "Refrigerator",
+        "MAC": "00:1B44:11:3A:B7",
+        "IP": "127.0.0.2",
+        "CreateDate": "2021-02-03",
+        "Power": "70"
+    },
+    {
+        "Device": "Selling Fan",
+        "MAC": "00:1B44:11:3A:B7",
+        "IP": "127.0.0.2",
+        "CreateDate": "2021-09-11",
+        "Power": "80"
+    },
+    {
+        "Device": "Phone",
+        "MAC": "00:1B44:11:3A:B7",
+        "IP": "127.0.0.2",
+        "CreateDate": "2023-06-32",
+        "Power": "90"
+    },
+    {
+        "Device": "ABC",
+        "MAC": "00:1B44:11:3A:B7",
+        "IP": "127.0.0.2",
+        "CreateDate": "2021-01-32",
+        "Power": "10"
+    },
+    {
+        "Device": "XYZ",
+        "MAC": "00:1B44:11:3A:B7",
+        "IP": "127.0.0.2",
+        "CreateDate": "2021-02-32",
+        "Power": "20"
+    }
+]
